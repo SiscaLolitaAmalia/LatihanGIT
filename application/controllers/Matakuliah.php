@@ -13,20 +13,18 @@ class Matakuliah extends CI_Controller
             'required|min_length[3]',
             [
                 'required' => 'Kode Matakuliah Harus diisi',
-                'min_length' => 'Kode terlalu pendek' // Perbaiki pengejaan di sini
+                'min_length' => 'Kode terlalu pendek'
             ]
         );
-
         $this->form_validation->set_rules(
             'nama',
             'Nama Matakuliah',
             'required|min_length[3]',
             [
                 'required' => 'Nama Matakuliah Harus diisi',
-                'min_length' => 'Nama terlalu pendek' // Perbaiki pengejaan di sini
+                'min_length' => 'Nama terlalu pendek'
             ]
         );
-
         if ($this->form_validation->run() != true) {
             $this->load->view('view-form-matakuliah');
         } else {
